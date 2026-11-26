@@ -83,11 +83,18 @@ API docs (Swagger UI): *http://127.0.0.1:8000/docs*
 
 Request body:
 {
-  "Gender": "female",
-  "Age": 18,
-  "Study_Hours": 5,
-  "Attendance": 90,
-  "Previous_score": 75
+  age: int
+    gender: Literal["female", "male", "other"]
+    school_type: Literal["private", "public"]
+    parent_education: Literal["no formal", "high school", "diploma", "graduate", "post graduate", "phd"]
+    study_hours: float
+    attendance_percentage: float
+    internet_access: Literal["yes", "no"]
+    extra_activities: Literal["yes", "no"]
+    study_method: Literal["mixed", "notes", "textbook", "group study", "coaching", "online videos"]
+    math_score: float
+    science_score: float
+    english_score: float
 }
 Response:
 {
